@@ -1,0 +1,155 @@
+# Compiled class file
+*.class
+
+# Log files
+*.log
+logs/
+/log/
+app/logs/
+lotus-server/logs/
+module-user/logs/
+module-std/logs/
+LOG_HOME_IS_UNDEFINED
+*.log.*
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+replay_pid*
+
+# Maven
+target/
+*/target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# IntelliJ IDEA
+.idea/
+.codex/
+*.iws
+*.iml
+*.ipr
+out/
+.idea_modules/
+
+# Eclipse
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+# VS Code
+.vscode/
+.code-workspace
+
+# Mac OS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Spring Boot
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# 敏感配置和环境相关
+# 生产环境配置和敏感信息
+!*/src/main/profiles/prod/
+!*/src/main/profiles/pre/
+# 测试环境配置通常也包含敏感信息
+!*/src/main/profiles/test/
+# 保留本地开发环境配置 - 通常包含模拟数据
+!*/src/main/profiles/local/
+
+# 特定敏感信息文件 - 应当使用加密或环境变量代替
+application-*-prod.yml
+application-*-pre.yml
+application-*-test.yml
+
+# 覆盖率报告
+coverage-reports/
+jacoco-unit.exec
+
+# 本地配置文件
+*.local.*
+*.dev.*
+
+# Node modules
+node_modules/
+.cursor
+
+.issues
+**/application-local.yml
+**/application-localTest.yml
+
+# claude 开发辅助文档
+CLAUDE.md
+.claude/**
+claude-tests
+*/MODULE.md
+**/ApiSearchController.java
+~
+.sisyphus/**
+lotus.code-workspace
+AGENTS.md
+.pi
+.pi-subagents
+.zed
+.zcode
+module-std/src/test
+
+
+# dop
+dop-prod.yml
+lotus-server/src/main/profiles/local/application-lanclaw.yml
+lotus-server/src/main/profiles/local/application-localRelease.yml
+
+# dev-start cache
+.sisyphus/.dev-start-cache/
+.reasonix
+reasonix.toml
+
+# === 敏感配置（环境变量 / profile 密码文件）===
+.env
+.env.*
+!.env.example
+*.local
+# Spring Boot profile 密码文件（含密码，不入库；新同事从密码工具获取）
+src/main/profiles/*/application-*.yml
+!src/main/profiles/*/application-example.yml
+/lotus-server/src/main/profiles/test/application.yml

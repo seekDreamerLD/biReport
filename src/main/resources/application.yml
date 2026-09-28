@@ -1,0 +1,51 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: bi-report-server
+  datasource:
+    url: jdbc:mysql://localhost:3306/bi_report?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=utf8&allowPublicKeyRetrieval=true
+    username: root
+    password: Ld420117
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+  sql:
+    init:
+      mode: always
+      encoding: utf-8
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 60MB
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      database: 0
+      timeout: 3s
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    banner: false
+    db-config:
+      id-type: auto
+
+bi:
+  jwt:
+    # 生产环境请更换为随机长密钥
+    secret: bireport-default-jwt-secret-key-2026-change-me-please-0123456789
+    expire-hours: 24
+  ai:
+    # 智谱开放平台 API Key（https://open.bigmodel.cn），请勿提交到公开仓库
+    api-key: b6e67cdaa2184d11a1e0bc231d976fdf.gbsamvHHTIMLbuU2
+    model: glm-4.5-flash
+    base-url: https://open.bigmodel.cn/api/paas/v4
+
+logging:
+  level:
+    com.bireport: info
